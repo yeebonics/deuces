@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deuces | Scoreboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/assets/deuces-favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav id="nav">
+			<ul>
+				<li class="nav-link"><a href="#">Rules</a></li>
+				<li class="nav-link active"><a href="#">Scoreboard</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content">
+		
+			<div class="title">
+				<div class="title-head">Current Standings</div>
+				<div class="title-caption">as of August 30, 2020</div>
+			</div>
+			<div id="scoreboard" class="active">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">Rank</th>
+							<th scope="col">Player</th>
+							<th scope="col">Wins</th>
+						</tr>
+					</thead>
+						<tr>
+							<td>1</td>
+							<td>LeFong</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>pkcho</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>yeebonics</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>atom</td>
+							<td>0</td>
+						</tr>
+				</table>
+			</div>
+			<div id="rules">
+				<section>
+					<div class="section-title">Authentication</div>
+					<ul class="rule-list">
+						<li>3 to 4 player games</li>
+						<li>3 players on the scoreboard have to be playing</li>
+					</ul>
+				</section>
+				<section>
+					<div class="section-title">Gameplay</div>
+					<ul class="rule-list">
+						<li>Card order from low to high (3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A, 2)</li>
+						<li>Suit order from low to high (♦️, ♣️, ♥️, ♠️)</li>
+						<li>Rotation: determined by first playable move after the 3♦️</li>
+						<li>Players play playable hands with higher priority, or pass</li>
+						<li>If a player forces all opponents to pass, they can play any card</li>
+						<li>No Triples</li>
+						<li>Deuces can be used in straights</li>
+						<li>5 card max on Straights &amp; Flushes</li>
+						<li>Straight priority is determined by high card</li>
+						<li>Flush priority is determined by suit, then high card</li>
+					</ul>
+				</section>
+				<section>
+					<div class="section-title">Playable Hands (low to high)</div>
+					<ul class="rule-list">
+						<li>Pairs: two of a kind</li>
+						<li>Straights: 5 consecutive cards</li>
+						<li>Flushes: 5 of the same suit</li>
+						<li>Full House: 3 of a kind &amp; 2 of a kind</li>
+						<li>Four of a Kind: 4 of a kind &amp; any card</li>
+						<li>Straight Flush: a straight in the same suit</li>
+						<li>Royal Flush: 10, J, K, Q, A of the same suit</li>
+					</ul>
+				</section>
+			
+		</div>
+
+		
+
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
