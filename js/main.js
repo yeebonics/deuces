@@ -2,8 +2,6 @@ $(".nav-link").on("click", function (e) {
   e.preventDefault();
   const target = $(this).find(":first").text();
   const currentActive = $("li").find("li").hasClass("active");
-  console.log(target);
-  console.log(this)
   if ($(this).hasClass("active")) {
     return false;
   } else if (target == "Scoreboard"){
@@ -23,3 +21,28 @@ $(".nav-link").on("click", function (e) {
   $(".nav-link").removeClass("active");
   $(this).addClass("active");
 })
+
+
+// onload
+
+/*
+  read scores in json
+  render the table based on highest score
+*/
+
+
+$.getJSON("js/scoreboard.json", function (data) {
+  data.sort(function (a, b) {
+    return b.score - a.score;
+  })
+  renderTable(data)
+})
+
+function renderTable(arr) {
+  var counter = 1;
+  arr.forEach(function (el) {
+    console.log(counter);
+    $('#score-table tr:last').after(`<tr> <td>  ${counter} </td>  <td>  ${el["player"]} </td>   <td>  ${el["score"]} </td></tr>`);
+    counter++;
+  })
+}
