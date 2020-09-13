@@ -9,7 +9,7 @@ $(".nav-link").on("click", function (e) {
     $("#rules").removeClass("active");
     $("#scoreboard").show();
     $(".title-head").text("Current Standings")
-    $(".title-caption").text("as of August 30, 2020");
+    $(".title-caption").text("as of September 12, 2020");
     document.title = "Deuces | Scoreboard";
   } else {
     $("#rules").addClass("active");
