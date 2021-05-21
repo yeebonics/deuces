@@ -9,7 +9,7 @@ $(".nav-link").on("click", function (e) {
     $("#rules").removeClass("active");
     $("#scoreboard").show();
     $(".title-head").text("Current Standings")
-    $(".title-caption").text("as of September 12, 2020");
+    $(".title-caption").text("as of May 21, 2021");
     document.title = "Deuces | Scoreboard";
   } else {
     $("#rules").addClass("active");
@@ -39,10 +39,17 @@ $.getJSON("js/scoreboard.json", function (data) {
 })
 
 function renderTable(arr) {
+  var score = "score";
+  var games = "games"
+  createTableRow(score, arr) 
+}
+
+function createTableRow(data, arr) {
   var counter = 1;
+
   arr.forEach(function (el) {
     console.log(counter);
-    $('#score-table tr:last').after(`<tr> <td>  ${counter} </td>  <td>  ${el["player"]} </td>   <td>  ${el["score"]} </td></tr>`);
+    $('#score-table tr:last').after(`<tr> <td>  ${counter} </td>  <td>  ${el["player"]} </td>   <td>  ${el["score"]} </td> <td>${el["games"]} </td></tr>`);
     counter++;
   })
 }

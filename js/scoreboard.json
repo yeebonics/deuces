@@ -1,18 +1,22 @@
 [
   {
     "player": "lefong",
-    "score": 50
+    "score": 50,
+    "games": 80
   },
    {
     "player": "yeebonics",
-    "score": 47
+    "score": 47,
+    "games": 88
   },
    {
     "player": "pkcho",
-    "score": 35
+    "score": 35,
+    "games": 80
   },
    {
     "player": "atom",
-    "score": 10
+    "score": 10,
+    "games": 35
   }
 ]
