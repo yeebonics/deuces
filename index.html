@@ -4,8 +4,8 @@
 	<title>Deuces | Scoreboard</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="assets/deuces-favicon.png">
-	<link rel="stylesheet" type="text/css" href="assets/main.css">
+	<link rel="icon" href="/assets/deuces-favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<header>
@@ -26,9 +26,10 @@
 				<table id="score-table">
 					<thead>
 						<tr>
-							<th scope="col">Rank</th>
-							<th scope="col">Player</th>
-							<th scope="col">Wins</th>
+							<th>Rank</th>
+							<th>Player</th>
+							<th>Wins</th>
+							<th>Games</th>
 						</tr>
 					</thead>
 					
@@ -43,33 +44,26 @@
 					</ul>
 				</section>
 				<section>
-					<div class="section-title">Rules</div>
+					<div class="section-title">Gameplay</div>
 					<ul class="rule-list">
 						<li>Card order from low to high (3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A, 2)</li>
 						<li>Suit order from low to high (♦️, ♣️, ♥️, ♠️)</li>
 						<li>Rotation: determined by first playable move after the 3♦️</li>
 						<li>Players play playable hands with higher priority, or pass</li>
 						<li>If a player forces all opponents to pass, they can play any card</li>
-						<li>Deuces can be used in straight (2, 3, 4, 5, 6)</li>
+						<li><span class="emphasis">No Triples</span></li>
+						<li>Deuces can be used in straight (2. 3, 4, 5, 6)</li>
 						<li>5 card max on Straights &amp; Flushes</li>
-					</ul>
-				</section>
-				<section>
-					<div class="section-title">Game Types</div>
-					<ul class="rule-list">
-						<li><em>First to Win:</em> First player to empty their hand wins</li>
-						<li><em>First to X:</em> Players play "X" games. Winner is the player to win "X" first.</li>
-						<li><em>Best of X:</em> Players play "X" games. After a player wins, the losers add their remaining cards to a count. At the end of "X" games, the player with the most cards in their count loses </li>
-						<li>All individual wins in legal games are added to players' win totals</li>
+						<li>Straight priority is determined by high card</li>
+						<li>Flush priority is determined by suit, then high card</li>
 					</ul>
 				</section>
 				<section>
 					<div class="section-title">Playable Hands (low to high)</div>
 					<ul class="rule-list">
 						<li>Pairs: two of a kind</li>
-						<li><span class="emphasis">No Triples</span></li>
-						<li>Straights: 5 consecutive cards (high card priority)</li>
-						<li>Flushes: 5 of the same suit (suit, then high card priority)</li>
+						<li>Straights: 5 consecutive cards</li>
+						<li>Flushes: 5 of the same suit</li>
 						<li>Full House: 3 of a kind &amp; 2 of a kind</li>
 						<li>Four of a Kind: 4 of a kind &amp; any card</li>
 						<li>Straight Flush: a straight in the same suit</li>
