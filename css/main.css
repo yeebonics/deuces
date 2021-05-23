@@ -37,7 +37,9 @@ time, mark, audio, video {
 body {
   line-height: 1;
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 1.5;
+  font-weight: 200;
   background: #1B1C1E;
   max-height: 100vh;
 }
@@ -53,16 +55,16 @@ a {
 }
 
 #content {
-  max-width: 420px;
-  margin: auto;
-  min-width: 320px;
   position: relative;
-  margin-top: 66px;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 32px;
 }
 
 .title {
+  position: relative;
   text-align: center;
-  margin-top: 36px;
+  margin-top: 64px;
   margin-bottom: 24px;
 }
 .title .title-head {
@@ -74,6 +76,7 @@ a {
 }
 .title .title-caption {
   color: #949494;
+  margin-top: 8px;
 }
 
 .container {
@@ -87,6 +90,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 #nav {
@@ -116,45 +120,47 @@ header {
   background: #181818;
 }
 #scoreboard.active {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: auto;
-  min-height: 320px;
-  min-width: 420px;
-  box-shadow: 0px 4px 10px;
+  width: 100%;
+  margin: auto;
+  max-width: 600px;
+  min-height: 240px;
   border-radius: 5px;
   opacity: 1;
+  color: white;
+  padding: 18px;
 }
 
 table {
-  color: white;
-  width: 100%;
+  min-width: 320px;
   height: 100%;
-  padding: 18px;
+  width: 100%;
   border-spacing: 24px;
-  margin-top: 56px;
 }
 
 thead {
   color: #393939;
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 400;
+  letter-spacing: 2px;
   padding: 24px;
+  height: 100px;
+  font-size: 11px;
 }
 
-th {
-  width: auto;
-}
 th:nth-child(2) {
   text-align: left;
+  margin: 0;
 }
-
-.col {
-  width: 200px;
+th .col {
+  width: auto;
 }
 
 tr {
-  height: 24px;
+  width: auto;
 }
 tr :nth-child(1), tr :nth-child(3) {
   text-align: center;
@@ -165,6 +171,7 @@ td {
   text-transform: none;
   font-weight: 500;
   min-height: 24px;
+  font-size: 12px;
   vertical-align: middle;
   text-align: center;
   width: inherit;
@@ -173,8 +180,15 @@ td:nth-child(2) {
   text-align: left;
 }
 
+tr.row:nth-child(odd) > td {
+  color: grey;
+}
+
 #rules {
   display: none;
+  width: 600px;
+  margin: auto;
+  padding-bottom: 64px;
 }
 #rules.active {
   display: block;
@@ -253,16 +267,11 @@ td:nth-child(2) {
 
   #score-table {
     padding: 0;
-    border-spacing: 0px;
+    border-spacing: 16px;
   }
   #score-table thead {
-    padding: 4px;
-    font-size: 10px;
+    font-size: 9px;
     margin: 0;
-  }
-
-  th {
-    width: 44px;
   }
 
   #nav {
