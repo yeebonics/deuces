@@ -9,13 +9,11 @@ $(".nav-link").on("click", function (e) {
     $("#rules").removeClass("active");
     $("#scoreboard").show();
     $(".title-head").text("Current Standings")
-    $(".title-caption").text("as of May 21, 2021");
     document.title = "Deuces | Scoreboard";
   } else {
     $("#rules").addClass("active");
     $("#scoreboard").removeClass("active");
     $(".title-head").text("Official Ruleset")
-    $(".title-caption").text("For games to be counted towards your score");
     document.title = "Deuces | Rules";
   }
   $(".nav-link").removeClass("active");
@@ -29,6 +27,8 @@ $(".nav-link").on("click", function (e) {
   read scores in json
   render the table based on highest score
 */
+
+$("#last-updated").text("as of May 23, 2021");
 
 
 $.getJSON("js/scoreboard.json", function (data) {
@@ -46,10 +46,14 @@ function renderTable(arr) {
 
 function createTableRow(data, arr) {
   var counter = 1;
+  
 
   arr.forEach(function (el) {
-    console.log(counter);
-    $('#score-table tr:last').after(`<tr> <td>  ${counter} </td>  <td>  ${el["player"]} </td>   <td>  ${el["score"]} </td> <td>${el["games"]} </td></tr>`);
+    var winRate = el["score"] / el["games"];
+    var roundedRate = (winRate * 100).toFixed(1)
+
+    //console.log(counter);
+    $('#table-body').before(`<tr class="row"> <td>  ${counter} </td>  <td>  ${el["player"]} </td>   <td>  ${el["score"]} </td> <td>${el["games"]} </td> <td>${roundedRate}%</td> </tr>`);
     counter++;
   })
 }
