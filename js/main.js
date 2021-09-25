@@ -28,7 +28,7 @@ $(".nav-link").on("click", function (e) {
   render the table based on highest score
 */
 
-$("#last-updated").text("as of May 23, 2021");
+$("#last-updated").text("as of September 25, 2021");
 
 
 $.getJSON("js/scoreboard.json", function (data) {
